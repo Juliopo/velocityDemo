@@ -3,28 +3,12 @@ import {
   View
 } from 'react-native';
 
-import IndexView from './indexView';
+import MainController from './MainController'
 
-export default class velocityDemo extends Component {
-  constructor() {
-    super()
-
-    this.state = {
-      text: null
-    }
-  }
-
-  handleInput(valueText) {
-    this.setState({text: valueText});
-  }
-
-  submitSerachValue() {
-
-  }
-
+export default class index extends Component {
   render() {
     return (
-      <IndexView handleInput={this.handleInput.bind(this)} />
+      <MainController />
     )
   }
 }

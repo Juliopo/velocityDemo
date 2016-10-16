@@ -4,20 +4,22 @@ import {
   Text,
   View,
   Image,
-  TextInput
 } from 'react-native';
 
 
 export default class velocityDemo extends Component {
   render() {
-    let { handleInput } = this.props;
+    let { handleInput, savedData } = this.props;
     return (
       <View style={styles.container}>
-        <Image style={{width: 300, height: 150}} source={{uri: "http://1.bp.blogspot.com/-SqrqlCjwiqQ/VHa1uvKDLkI/AAAAAAAAiH4/9R_Gqau5jZA/s1600/Pokemon-Logo-em-png-queroimagem-cei%C3%A7a-crispim.png"}} />
+        <Image style={{width: 300, height: 150}} source={require('../images/Pokemon-Logo.png')} />
         <Text style={styles.welcome}>
-          Welcome to Pokemon App!
+          Profile App view
         </Text>
-        <TextInput style={styles.textInput} onChangeText={(text) => handleInput(text)}/>
+        <Text style={ styles.user }>Julio Jaramillo</Text>
+        <Text>Tus Puntos acumulados</Text>
+        <Text>Tienes { (savedData && savedData.length) || "0" } Puntos</Text>
+
       </View>
     );
   }
@@ -36,9 +38,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
-  textInput: {
-    alignSelf: 'stretch',
-    height: 50,
-    marginHorizontal: 30
+  user: {
+    fontSize: 25,
+    textAlign: 'center',
+    margin: 10,
+    color: 'grey'
   }
 });
