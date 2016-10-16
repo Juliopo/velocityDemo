@@ -65,7 +65,7 @@ export default class MainController extends Component {
     return (
       <Navigator
         ref='mainNav'
-        initialRoute={routes[2]}
+        initialRoute={routes[0]}
         renderScene={this._renderScene.bind(this)}
       />
     )
