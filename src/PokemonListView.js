@@ -17,7 +17,6 @@ export default class PokemonListView extends Component {
 
   render() {
     let { handleInput, savedData, onRefreshData, isRefreshing } = this.props;
-    console.log(savedData)
     return (
       <ScrollView style={ styles.scrollView }
         refreshControl={

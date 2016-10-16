@@ -24,7 +24,11 @@ export default class MainController extends Component {
     let nav = this.refs && this.refs.mainNav
 
     if(nav) {
-      this.refs.mainNav.jumpTo(route);
+      if(nav.getCurrentRoutes().length > 1) {
+        this.refs.mainNav.replacePreviousAndPop(route)
+      } else {
+        this.refs.mainNav.push(route);
+      }
     }
   }
 
@@ -62,7 +66,6 @@ export default class MainController extends Component {
       <Navigator
         ref='mainNav'
         initialRoute={routes[2]}
-        initialRouteStack={routes}
         renderScene={this._renderScene.bind(this)}
       />
     )

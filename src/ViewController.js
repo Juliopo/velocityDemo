@@ -60,7 +60,6 @@ export default class ViewController extends Component {
         })
 
         this.setState({savedData: values, isRefreshing: false})
-        this.props.refreshParent();
 
       }
     } catch (error) {
