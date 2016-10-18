@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 
-export default class velocityDemo extends Component {
+export default class SearchView extends Component {
   render() {
     let { handleInput, onSubmit, pokemon, loading, addPokemon } = this.props;
     return (

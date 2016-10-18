@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 
 
-export default class velocityDemo extends Component {
+export default class ProfileView extends Component {
   render() {
     let { handleInput, savedData } = this.props;
     return (
